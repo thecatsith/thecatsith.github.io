@@ -1,0 +1,21 @@
+{
+  "name": "thecatsith.github.io",
+  "version": "0.0.0",
+  "description": "Another portfolio site.",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecatsith/thecatsith.github.io.git"
+  },
+  "author": "Jen Hoskins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thecatsith/thecatsith.github.io/issues"
+  },
+  "homepage": "https://thecatsith.github.io"
+}
