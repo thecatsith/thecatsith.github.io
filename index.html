@@ -9,17 +9,26 @@
     <link rel="alternate" type="application/rss+xml" href="">
     <meta name="description" content="{MetaDescription}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/ba8ba683ff.js"></script>
     <style>
-      main {
+      main, footer {
         max-width: 70ch;
         padding: 2ch;
         margin: auto;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-around;
+      }
+      .button-footer {
+        font-size: 2em;
+        color: #000;
       }
     </style>
     <title>thecatsith.github.io</title>
   </head>
   <body>
-    <main>
+    <main id="main">
       <h1>What is a <i>cat sith</i>?</h1>
       <blockquote cite="https://en.wikipedia.org/wiki/Cat_s%C3%ACth">
         <p>
@@ -30,5 +39,22 @@
         </footer>
       </blockquote>
     </main>
+    <footer class="footer">
+      <a href="https://www.twitter.com/jayceehoskins" title="Twitter" target="_blank">
+        <div class="button button-footer">
+          <i class="fab fa-twitter"></i>
+        </div>
+      </a>
+      <a href="https://www.github.com/thecatsith" title="Github" target="_blank">
+        <div class="button button-footer">
+          <i class="fab fa-github"></i>
+        </div>
+      </a>
+      <a href="https://jayceeha.itch.io" title="Itch.io" target="_blank">
+        <div class="button button-footer">
+          <i class="fab fa-itch-io"></i>
+        </div>
+      </a>
+    </footer>
   </body>
 </html>
