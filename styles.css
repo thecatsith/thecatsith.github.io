@@ -1,0 +1,37 @@
+body {
+  background-color: #212121;
+  color: #fafafa;
+}
+
+main, .footer {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+}
+
+a {
+  color: #ffc107;
+  font-style: normal;
+  text-decoration: underline dashed;
+}
+
+a:hover, a:focus {
+  background-color: #ffc107;
+  color: #212121;
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__icon {
+  font-size: 2em;
+  color: #ffc107;
+}
+
+.footer__icon:hover, .footer__icon:focus {
+  color: #00bcd4;
+  background-color: #212121;
+}
