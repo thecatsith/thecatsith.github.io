@@ -1,5 +1,5 @@
 {
-  "name": "thecatsith.github.io",
+  "name": "jayceehex.github.io",
   "version": "0.0.0",
   "description": "Another portfolio site.",
   "main": "index.html",
@@ -15,7 +15,7 @@
   "author": "Jen Hoskins",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thecatsith/thecatsith.github.io/issues"
+    "url": "https://github.com/jayceehex/jayceehex.github.io/issues"
   },
-  "homepage": "https://thecatsith.github.io"
+  "homepage": "https://jayceehex.github.io"
 }
