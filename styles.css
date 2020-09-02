@@ -1,6 +1,6 @@
 body {
-  background-color: #212121;
-  color: #fafafa;
+  color: #212121;
+  background-color: #fafafa;
 }
 
 main, .footer {
@@ -10,14 +10,14 @@ main, .footer {
 }
 
 a {
-  color: #ffc107;
+  color: #00b8d4;
   font-style: normal;
   text-decoration: underline dashed;
 }
 
 a:hover, a:focus {
-  background-color: #ffc107;
-  color: #212121;
+  background-color: #00b8d4;
+  color: #fafafa;
   text-decoration: none;
 }
 
@@ -28,10 +28,26 @@ a:hover, a:focus {
 
 .footer__icon {
   font-size: 2em;
-  color: #ffc107;
+  background-color: #00b8d4;
 }
 
 .footer__icon:hover, .footer__icon:focus {
-  color: #00bcd4;
-  background-color: #212121;
+  color: #ffc107;
+  background-color: #fafafa;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #212121;
+    color: #fafafa;
+  }
+
+  a {
+    color: #ffc107;
+  }
+  
+  a:hover, a:focus {
+    background-color: #ffc107;
+    color: #212121;
+  }
 }
