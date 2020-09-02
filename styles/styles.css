@@ -1,16 +1,17 @@
 :root {
   --footer-height: 7em;
-  --background-colour: #fafafa;
-  --text-colour: #212121;
-  --primary-accent-colour: #00b8d4;
-  --secondary-accent-colour: #ffc107;
+  --background-colour: #eceff1;
+  --text-colour: #000;
+  --primary-accent-colour: #304ffe;
+  --line-height: 1.25rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-colour: #212121;
-    --text-colour: #fafafa;
-    --primary-accent-colour: #ffc107;
+    --background-colour: #263238;
+    --text-colour: #fff;
+    --primary-accent-colour: #ffd600;
+    --line-height: 1.35rem;
   }
 }
 
@@ -23,18 +24,7 @@ body {
   background-color: var(--background-colour);
   height: 100%;
   margin: 0;
-  line-height: 1.25rem;
-}
-
-.container {
-  position: relative;
-  min-height: 100%;
-}
-
-main, .footer__container {
-  max-width: 70ch;
-  padding: 2ch;
-  margin: auto;
+  line-height: var(--line-height);
 }
 
 main {
@@ -57,11 +47,32 @@ b {
   color: var(--primary-accent-colour);
 }
 
-.footer {
+header {
+  min-height: 20vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+footer {
   position: absolute;
   bottom: 0;
   height: var(--footer-height);
   width: 100%;
+}
+
+.container {
+  position: relative;
+  min-height: 100%;
+}
+
+.content-box {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+}
+
+.header__text {
+  color: var(--primary-accent-colour);
 }
 
 .footer__container {
