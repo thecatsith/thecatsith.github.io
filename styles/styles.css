@@ -1,6 +1,26 @@
+:root {
+  --footer-height: 5em;
+  --background-colour: #fafafa;
+  --text-colour: #212121;
+  --primary-accent-colour: #00b8d4;
+  --secondary-accent-colour: #ffc107;
+  --dark-mode-background-colour: #212121;
+  --dark-mode-text-colour: #fafafa;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  color: #212121;
-  background-color: #fafafa;
+  color: var(--text-colour);
+  background-color: var(--background-colour);
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  min-height: 100%;
 }
 
 main, .footer {
@@ -9,15 +29,25 @@ main, .footer {
   margin: auto;
 }
 
+main {
+  padding-bottom: var(--footer-height);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: var(--footer-height);
+}
+
 a {
-  color: #00b8d4;
+  color: var(--primary-accent-colour);
   font-style: normal;
   text-decoration: underline dashed;
 }
 
 a:hover, a:focus {
-  background-color: #00b8d4;
-  color: #fafafa;
+  background-color: var(--primary-accent-colour);
+  color: var(--background-colour);
   text-decoration: none;
 }
 
@@ -28,26 +58,26 @@ a:hover, a:focus {
 
 .footer__icon {
   font-size: 2em;
-  background-color: #00b8d4;
+  background-color: var(--primary-accent-colour);
 }
 
 .footer__icon:hover, .footer__icon:focus {
-  color: #ffc107;
+  color: var(--secondary-accent-colour);
   background-color: #fafafa;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #212121;
-    color: #fafafa;
+    background-color: var(--dark-mode-background-colour);
+    color: var(--dark-mode-text-colour);
   }
 
   a {
-    color: #ffc107;
+    color: var(--secondary-accent-colour);
   }
   
   a:hover, a:focus {
-    background-color: #ffc107;
-    color: #212121;
+    background-color: var(--secondary-accent-colour);
+    color: var(--dark-mode-background-colour);
   }
 }
