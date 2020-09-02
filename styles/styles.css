@@ -1,11 +1,17 @@
 :root {
-  --footer-height: 5em;
+  --footer-height: 7em;
   --background-colour: #fafafa;
   --text-colour: #212121;
   --primary-accent-colour: #00b8d4;
   --secondary-accent-colour: #ffc107;
-  --dark-mode-background-colour: #212121;
-  --dark-mode-text-colour: #fafafa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-colour: #212121;
+    --text-colour: #fafafa;
+    --primary-accent-colour: #ffc107;
+  }
 }
 
 html {
@@ -17,6 +23,7 @@ body {
   background-color: var(--background-colour);
   height: 100%;
   margin: 0;
+  line-height: 1.25rem;
 }
 
 .container {
@@ -46,6 +53,10 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+b {
+  color: var(--primary-accent-colour);
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -60,26 +71,10 @@ a:hover, a:focus {
 
 .footer__icon {
   font-size: 2em;
-  background-color: var(--primary-accent-colour);
+  color: var(--text-colour);
 }
 
 .footer__icon:hover, .footer__icon:focus {
-  color: var(--secondary-accent-colour);
-  background-color: #fafafa;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--dark-mode-background-colour);
-    color: var(--dark-mode-text-colour);
-  }
-
-  a {
-    color: var(--secondary-accent-colour);
-  }
-  
-  a:hover, a:focus {
-    background-color: var(--secondary-accent-colour);
-    color: var(--dark-mode-background-colour);
-  }
+  color: var(--primary-accent-colour);
+  background-color: var(--background-colour);
 }
