@@ -16,6 +16,7 @@ body {
   color: var(--text-colour);
   background-color: var(--background-colour);
   height: 100%;
+  margin: 0;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
   min-height: 100%;
 }
 
-main, .footer {
+main, .footer__container {
   max-width: 70ch;
   padding: 2ch;
   margin: auto;
@@ -31,12 +32,6 @@ main, .footer {
 
 main {
   padding-bottom: var(--footer-height);
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  height: var(--footer-height);
 }
 
 a {
@@ -52,6 +47,13 @@ a:hover, a:focus {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  height: var(--footer-height);
+  width: 100%;
+}
+
+.footer__container {
   display: flex;
   justify-content: space-around;
 }
