@@ -1,0 +1,9 @@
+.footer__icon {
+  font-size: 2em;
+  color: var(--text-colour);
+}
+
+.footer__icon:hover, .footer__icon:focus {
+  color: var(--primary-accent-colour);
+  background-color: var(--background-colour);
+}

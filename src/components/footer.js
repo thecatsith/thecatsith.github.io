@@ -1,34 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
 import { FaTwitter, FaGithub, FaItchIo } from "react-icons/fa"
 import "./footer.css"
+import FooterLink from "./footer-link"
+
+const footerLinks = [
+  {
+    title: 'Twitter',
+    to: 'https://www.twitter.com/jayceehex',
+    icon: (<FaTwitter />),
+  },
+  {
+    title: 'Github',
+    to: 'https://www.github.com/jayceehex',
+    icon: (<FaGithub />),
+  },
+  {
+    title: 'ItchIo',
+    to: 'https://jayceeha.itch.io',
+    icon: (<FaItchIo />),
+  },
+]
 
 const Footer = () => (
   <footer className="footer">
     <div className="content-box footer__container">
-      <Link
-        to="https://www.twitter.com/jayceehex"
-        title="Twitter"
-        target="_blank"
-      >
-        <div className="footer__icon">
-          <FaTwitter />
-        </div>
-      </Link>
-      <Link
-        to="https://www.github.com/jayceehex"
-        title="Github"
-        target="_blank"
-      >
-        <div className="footer__icon">
-          <FaGithub />
-        </div>
-      </Link>
-      <Link to="https://jayceeha.itch.io" title="Itch.io" target="_blank">
-        <div className="footer__icon">
-          <FaItchIo />
-        </div>
-      </Link>
+      {footerLinks.map((link, key) => (
+        <FooterLink title={link.title} to={link.to} icon={link.icon} key={key} />
+      ))}
     </div>
   </footer>
 )
