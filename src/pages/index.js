@@ -3,13 +3,12 @@ import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import SEO from "../components/seo"
 import '../styles/styles.css'
+import { FaTwitter, FaGithub, FaItchIo } from 'react-icons/fa'
 
 const IndexPage = () => (
   <>
     <Helmet>
       <title>jayceehex.github.io</title>
-      <link href="./assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
-      <link href="./assets/fontawesome/css/brands.css" rel="stylesheet" />
     </Helmet>
     <SEO title="jayceehex.github.io" />
     <div className="container">
@@ -27,17 +26,17 @@ const IndexPage = () => (
         <div className="content-box footer__container">
           <Link to="https://www.twitter.com/jayceehex" title="Twitter" target="_blank">
             <div className="footer__icon">
-              <i className="fab fa-twitter"></i>
+              <FaTwitter />
             </div>
           </Link>
           <Link to="https://www.github.com/jayceehex" title="Github" target="_blank">
             <div className="footer__icon">
-              <i className="fab fa-github"></i>
+              <FaGithub />
             </div>
           </Link>
           <Link to="https://jayceeha.itch.io" title="Itch.io" target="_blank">
             <div className="footer__icon">
-              <i className="fab fa-itch-io"></i>
+              <FaItchIo />
             </div>
           </Link>
         </div>
