@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--text-colour);
+  background-color: var(--background-colour);
+  height: 100%;
+  margin: 0;
+  line-height: var(--line-height);
+}
+
+a {
+  color: var(--primary-accent-colour);
+  font-style: normal;
+  text-decoration: underline dashed;
+}
+
+a:hover, a:focus {
+  background-color: var(--primary-accent-colour);
+  color: var(--background-colour);
+  text-decoration: none;
+}
+
+b {
+  color: var(--primary-accent-colour);
+}
+
+main {
+  padding-bottom: var(--footer-height);
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-box {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+}

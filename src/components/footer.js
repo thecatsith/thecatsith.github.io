@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FaTwitter, FaGithub, FaItchIo } from 'react-icons/fa'
+import './footer.css'
 
 const Footer = () => (
   <footer className="footer">
