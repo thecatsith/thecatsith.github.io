@@ -1,5 +1,3 @@
 # jayceehex.github.io
 
-## Acknowledgements
-
-My hello world page looks nice thanks to [these 58 bytes of CSS](https://jrl.ninja/etc/1/).
+This site is built using [Gatsby](https://github.com/gatsbyjs/gatsby), and the icons are served by [react-icons](https://github.com/react-icons/react-icons). 💜
