@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import "./footer-link.css"
+import "./footer-link.scss"
 
 const FooterLink = ({ title, to, icon }) => (
   <Link

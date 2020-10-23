@@ -1,0 +1,17 @@
+.footer__icon {
+  font-size: 2rem;
+  color: var(--dark-mode-text-colour);
+  &:hover, &:focus {
+    color: var(--dark-mode-primary-accent-colour);
+    background-color: transparent !important;
+  }
+}
+
+.light-theme {
+  .footer__icon {
+    color: var(--light-mode-text-colour);
+    &:hover, &:focus {
+      color: var(--light-mode-primary-accent-colour);
+    }
+  }
+}
