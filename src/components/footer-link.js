@@ -7,8 +7,9 @@ const FooterLink = ({ title, to, icon }) => (
     to={to}
     title={title}
     target="_blank"
+    className="footer__icon"
   >
-    <div className="footer__icon">
+    <div>
       {icon}
     </div>
   </Link>

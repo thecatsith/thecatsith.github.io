@@ -11,7 +11,7 @@ const IndexPage = () => (
     <Layout>
       <div className="content-box">
         <p>
-          <span class="highlight">Jen Hoskins</span> is a JavaScript developer from the West Country.
+          <span className="highlight">Jen Hoskins</span> is a JavaScript developer from the West Country.
           They have experience in React and Angular frameworks, and are trying
           to get better at functional programming. CSS styling is their
           favourite coding hobby, especially when it comes to accessibility.
