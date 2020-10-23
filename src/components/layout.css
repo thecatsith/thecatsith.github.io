@@ -40,3 +40,8 @@ main {
   padding: 2ch;
   margin: auto;
 }
+
+.highlight {
+  font-weight: 700;
+  color: var(--primary-accent-colour);
+}
