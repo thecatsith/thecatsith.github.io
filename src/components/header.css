@@ -1,9 +1,35 @@
 header {
   min-height: 20vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__text {
-  color: var(--primary-accent-colour);
+  color: var(--dark-mode-primary-accent-colour);
+}
+
+.light-theme .header__text {
+  color: var(--light-mode-primary-accent-colour);
+}
+
+.icon-button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  color: var(--dark-mode-text-colour);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.light-theme .icon-button {
+  color: var(--light-mode-text-colour);
+}
+
+.icon-button:hover, .icon-button:focus {
+  color: var(--dark-mode-primary-accent-colour);
+}
+
+.light-theme .icon-button:hover, .icon-button:focus {
+  color: var(--light-mode-primary-accent-colour);
 }

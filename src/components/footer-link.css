@@ -1,9 +1,17 @@
 .footer__icon {
-  font-size: 2em;
-  color: var(--text-colour);
+  font-size: 2rem;
+  color: var(--dark-mode-text-colour);
+}
+
+.light-theme .footer__icon {
+  color: var(--light-mode-text-colour);
 }
 
 .footer__icon:hover, .footer__icon:focus {
-  color: var(--primary-accent-colour);
-  background-color: var(--background-colour);
+  color: var(--dark-mode-primary-accent-colour);
+  background-color: transparent !important;
+}
+
+.light-theme .footer__icon:hover, .light-theme .footer__icon:focus {
+  color: var(--light-mode-primary-accent-colour);
 }

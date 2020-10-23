@@ -1,16 +1,10 @@
 :root {
   --footer-height: 7em;
-  --background-colour: #eceff1;
-  --text-colour: #000;
-  --primary-accent-colour: #304ffe;
-  --line-height: 1.25rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-colour: #263238;
-    --text-colour: #fff;
-    --primary-accent-colour: #ffd600;
-    --line-height: 1.35rem;
-  }
+  --light-mode-background-colour: #eceff1;
+  --light-mode-text-colour: #000;
+  --light-mode-primary-accent-colour: #304ffe;
+  --dark-mode-background-colour: #263238;
+  --dark-mode-text-colour: #fff;
+  --dark-mode-primary-accent-colour: #ffd600;
+  --line-height: 1.35rem;
 }

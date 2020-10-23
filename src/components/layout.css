@@ -3,27 +3,32 @@ html {
 }
 
 body {
-  color: var(--text-colour);
-  background-color: var(--background-colour);
+  color: var(--dark-mode-text-colour);
+  background-color: var(--dark-mode-background-colour);
   height: 100%;
   margin: 0;
   line-height: var(--line-height);
 }
 
 a {
-  color: var(--primary-accent-colour);
+  color: var(--dark-mode-primary-accent-colour);
   font-style: normal;
   text-decoration: underline dashed;
 }
 
+.light-theme a {
+  color: var(--light-mode-primary-accent-colour);
+}
+
 a:hover, a:focus {
-  background-color: var(--primary-accent-colour);
-  color: var(--background-colour);
+  background-color: var(--dark-mode-primary-accent-colour);
+  color: var(--dark-mode-background-colour);
   text-decoration: none;
 }
 
-b {
-  color: var(--primary-accent-colour);
+.light-theme a:hover, a:focus {
+  background-color: var(--light-mode-primary-accent-colour);
+  color: var(--light-mode-background-colour);
 }
 
 main {
@@ -33,6 +38,12 @@ main {
 .container {
   position: relative;
   min-height: 100vh;
+  transition: all 0.1s linear;
+}
+
+.light-theme {
+  color: var(--light-mode-text-colour);
+  background-color: var(--light-mode-background-colour);
 }
 
 .content-box {
@@ -43,5 +54,9 @@ main {
 
 .highlight {
   font-weight: 700;
-  color: var(--primary-accent-colour);
+  color: var(--dark-mode-primary-accent-colour);
+}
+
+.light-theme .highlight {
+  color: var(--light-mode-primary-accent-colour)
 }
