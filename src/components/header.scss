@@ -9,26 +9,8 @@ header {
   color: var(--dark-mode-primary-accent-colour);
 }
 
-.icon-button {
-  display: inline-block;
-  border: none;
-  background-color: transparent;
-  color: var(--dark-mode-text-colour);
-  font-size: 1.5rem;
-  cursor: pointer;
-  &:hover, &:focus {
-    color: var(--dark-mode-primary-accent-colour);
-  }
-}
-
 .light-theme {
   .header__text {
     color: var(--light-mode-primary-accent-colour);
-  }
-  .icon-button {
-    color: var(--light-mode-text-colour);
-    &:hover, &:focus {
-      color: var(--light-mode-primary-accent-colour);
-    }
   }
 }

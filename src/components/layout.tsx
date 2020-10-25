@@ -11,13 +11,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import "./layout.scss"
 import Header from "./header"
 import Footer from "./footer"
+import MainNav from "./main-nav"
 
 const Layout = ({ children }) => {
   const [lightMode, setLightMode] = useState(false)
 
   const toggleLightMode = () => {
     setLightMode(!lightMode)
-    console.log('lightMode', lightMode)
+    console.log("lightMode", lightMode)
   }
 
   const data = useStaticQuery(graphql`
@@ -31,9 +32,12 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className={`container${lightMode ? ' light-theme' : ''}`}>
-      <Header siteTitle={data.site.siteMetadata?.title || ``} onToggleLightMode={toggleLightMode} lightMode={lightMode} />
-      <main id="main">{children}</main>
+    <div className={`container${lightMode ? " light-theme" : ""}`}>
+      <div className="content-box">
+        <MainNav onToggleLightMode={toggleLightMode} lightMode={lightMode} />
+        <Header siteTitle={data.site.siteMetadata?.title || ``} />
+        <main id="main">{children}</main>
+      </div>
       <Footer />
     </div>
   )
