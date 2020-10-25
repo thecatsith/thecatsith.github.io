@@ -3,7 +3,7 @@ import "./main-nav.scss"
 import { FaLightbulb, FaRegLightbulb, FaHome } from "react-icons/fa"
 import { Link } from "gatsby"
 
-const MainNav = ({ lightMode, onToggleLightMode }) => {
+const MainNav = ({ lightMode, toggleLightMode }) => {
   const lightModeToggleIcon = () =>
     lightMode ? <FaRegLightbulb /> : <FaLightbulb />
 
@@ -32,7 +32,7 @@ const MainNav = ({ lightMode, onToggleLightMode }) => {
         <li>
           <button
             className="main-nav--item icon-button"
-            onClick={onToggleLightMode}
+            onClick={toggleLightMode}
             aria-label="Toggle light mode"
           >
             {lightModeToggleIcon()}
