@@ -1,11 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 import "./footer-link.scss"
 
-const FooterLink = ({ title, to, icon }) => (
-  <Link to={to} title={title} target="_blank" className="footer__icon">
-    <div>{icon}</div>
-  </Link>
+const FooterLink = ({ title, href, icon }) => (
+  <a
+    href={href}
+    title={title}
+    target="_blank"
+    className="footer__icon"
+    rel="noreferrer"
+  >
+    {icon}
+  </a>
 )
 
 export default FooterLink

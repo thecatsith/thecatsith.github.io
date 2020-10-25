@@ -3,14 +3,17 @@ import { Helmet } from "react-helmet"
 import "../styles/styles.css"
 import Layout from "../components/layout"
 import { toggleLightMode } from "../state/app"
-import { connect } from 'react-redux'
+import { connect } from "react-redux"
 
 const AboutMePage = ({ dispatch, isLightMode }) => (
   <>
     <Helmet>
       <title>About me | jayceehex.github.io</title>
     </Helmet>
-    <Layout lightMode={isLightMode} toggleLightMode={() => dispatch(toggleLightMode(!isLightMode))}>
+    <Layout
+      lightMode={isLightMode}
+      toggleLightMode={() => dispatch(toggleLightMode(!isLightMode))}
+    >
       <p>
         <span className="highlight">Jen Hoskins</span> is a JavaScript developer
         from the West Country. They have experience in React and Angular
@@ -23,6 +26,9 @@ const AboutMePage = ({ dispatch, isLightMode }) => (
   </>
 )
 
-export default connect(state => ({
-  isLightMode: state.app.isLightMode
-}), null)(AboutMePage)
+export default connect(
+  state => ({
+    isLightMode: state.app.isLightMode,
+  }),
+  null
+)(AboutMePage)

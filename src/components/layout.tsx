@@ -12,8 +12,8 @@ import "./layout.scss"
 import Header from "./header"
 import Footer from "./footer"
 import MainNav from "./main-nav"
-import { connect } from 'react-redux'
-import { toggleLightMode } from '../state/app'
+import { connect } from "react-redux"
+import { toggleLightMode } from "../state/app"
 
 const Layout = ({ children, lightMode, toggleLightMode }) => {
   const data = useStaticQuery(graphql`
@@ -21,6 +21,10 @@ const Layout = ({ children, lightMode, toggleLightMode }) => {
       site {
         siteMetadata {
           title
+          navLinks {
+            name
+            link
+          }
         }
       }
     }
@@ -29,7 +33,11 @@ const Layout = ({ children, lightMode, toggleLightMode }) => {
   return (
     <div className={`container${lightMode ? " light-theme" : ""}`}>
       <div className="content-box">
-        <MainNav toggleLightMode={toggleLightMode} lightMode={lightMode} />
+        <MainNav
+          navLinks={data.site.siteMetadata?.navLinks || []}
+          toggleLightMode={toggleLightMode}
+          lightMode={lightMode}
+        />
         <Header siteTitle={data.site.siteMetadata?.title || ``} />
         <main id="main">{children}</main>
       </div>
