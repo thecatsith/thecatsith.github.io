@@ -29,8 +29,14 @@ const Layout = ({ location, lightMode, toggleLightMode, children }) => {
     }
   `)
 
-  const siteTitle = (path: string, author: string, navLinks: Array<any>): string =>
-    path === '/' ? author : navLinks.find(navLink => navLink.link == path)?.name || ``
+  const siteTitle = (
+    path: string,
+    author: string,
+    navLinks: Array<any>
+  ): string =>
+    path === "/"
+      ? author
+      : navLinks.find(navLink => navLink.link == path)?.name || ``
 
   return (
     <div className={`container${lightMode ? " light-theme" : ""}`}>
@@ -40,7 +46,13 @@ const Layout = ({ location, lightMode, toggleLightMode, children }) => {
           toggleLightMode={toggleLightMode}
           lightMode={lightMode}
         />
-        <Header siteTitle={siteTitle(location.pathname, data.site.siteMetadata?.author || ``, data.site.siteMetadata?.navLinks || [])} />
+        <Header
+          siteTitle={siteTitle(
+            location.pathname,
+            data.site.siteMetadata?.author || ``,
+            data.site.siteMetadata?.navLinks || []
+          )}
+        />
         <main id="main">{children}</main>
       </div>
       <Footer />

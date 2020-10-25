@@ -55,7 +55,8 @@ const AboutSitePage = ({ location, dispatch, isLightMode }) => (
         .
       </p>
       <p>
-        This site is dark mode by default. If you want to toggle between dark and light modes, click the lightbulb in the top right.
+        This site is dark mode by default. If you want to toggle between dark
+        and light modes, click the lightbulb in the top right.
       </p>
     </Layout>
   </>
