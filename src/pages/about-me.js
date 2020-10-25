@@ -5,12 +5,13 @@ import Layout from "../components/layout"
 import { toggleLightMode } from "../state/app"
 import { connect } from "react-redux"
 
-const AboutMePage = ({ dispatch, isLightMode }) => (
+const AboutMePage = ({ location, dispatch, isLightMode }) => (
   <>
     <Helmet>
       <title>About me | jayceehex.github.io</title>
     </Helmet>
     <Layout
+      location={location}
       lightMode={isLightMode}
       toggleLightMode={() => dispatch(toggleLightMode(!isLightMode))}
     >

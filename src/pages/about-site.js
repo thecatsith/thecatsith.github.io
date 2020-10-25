@@ -5,12 +5,13 @@ import Layout from "../components/layout"
 import { toggleLightMode } from "../state/app"
 import { connect } from "react-redux"
 
-const AboutSitePage = ({ dispatch, isLightMode }) => (
+const AboutSitePage = ({ location, dispatch, isLightMode }) => (
   <>
     <Helmet>
       <title>About this site | jayceehex.github.io</title>
     </Helmet>
     <Layout
+      location={location}
       lightMode={isLightMode}
       toggleLightMode={() => dispatch(toggleLightMode(!isLightMode))}
     >
@@ -52,6 +53,9 @@ const AboutSitePage = ({ dispatch, isLightMode }) => (
           Sass
         </a>
         .
+      </p>
+      <p>
+        This site is dark mode by default. If you want to toggle between dark and light modes, click the lightbulb in the top right.
       </p>
     </Layout>
   </>

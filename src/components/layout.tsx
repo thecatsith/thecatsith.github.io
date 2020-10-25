@@ -12,15 +12,14 @@ import "./layout.scss"
 import Header from "./header"
 import Footer from "./footer"
 import MainNav from "./main-nav"
-import { connect } from "react-redux"
-import { toggleLightMode } from "../state/app"
 
-const Layout = ({ children, lightMode, toggleLightMode }) => {
+const Layout = ({ location, lightMode, toggleLightMode, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          author
           navLinks {
             name
             link
@@ -30,6 +29,9 @@ const Layout = ({ children, lightMode, toggleLightMode }) => {
     }
   `)
 
+  const siteTitle = (path: string, author: string, navLinks: Array<any>): string =>
+    path === '/' ? author : navLinks.find(navLink => navLink.link == path)?.name || ``
+
   return (
     <div className={`container${lightMode ? " light-theme" : ""}`}>
       <div className="content-box">
@@ -38,7 +40,7 @@ const Layout = ({ children, lightMode, toggleLightMode }) => {
           toggleLightMode={toggleLightMode}
           lightMode={lightMode}
         />
-        <Header siteTitle={data.site.siteMetadata?.title || ``} />
+        <Header siteTitle={siteTitle(location.pathname, data.site.siteMetadata?.author || ``, data.site.siteMetadata?.navLinks || [])} />
         <main id="main">{children}</main>
       </div>
       <Footer />

@@ -14,13 +14,9 @@
     font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
-    &:hover, &:focus {
+    &:hover, &:focus, &__active {
       background-color: transparent;
       color: var(--dark-mode-primary-accent-colour);
-    }
-    &__active {
-      color: var(--dark-mode-background-colour);
-      background-color: var(--dark-mode-primary-accent-colour);
     }
   }
 }
@@ -28,13 +24,9 @@
 .light-theme {
   .main-nav--item {
     color: var(--light-mode-text-colour);
-    &:hover, &:focus {
+    &:hover, &:focus, &__active {
       background-color: transparent;
       color: var(--light-mode-primary-accent-colour);
-    }
-    &__active {
-      color: var(--light-mode-background-colour);
-      background-color: var(--light-mode-primary-accent-colour);
     }
   }
 }
