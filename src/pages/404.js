@@ -9,7 +9,7 @@ const NotFoundPage = ({ location, dispatch, isLightMode }) => (
   <Layout
     location={location}
     toggleLightMode={() => dispatch(toggleLightMode(!isLightMode))}
-    lightMode={lightMode}
+    lightMode={isLightMode}
   >
     <SEO title="404: Not found" />
     <h1>404: Not Found</h1>
