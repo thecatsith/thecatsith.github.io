@@ -1,0 +1,32 @@
+.main-nav {
+  position: sticky;
+  &--items {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
+  &--item {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    color: var(--dark-mode-text-colour);
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover, &:focus {
+      background-color: transparent;
+      color: var(--dark-mode-primary-accent-colour);
+    }
+  }
+}
+
+.light-theme {
+  .main-nav--item {
+    color: var(--light-mode-text-colour);
+    &:hover, &:focus {
+      background-color: transparent;
+      color: var(--light-mode-primary-accent-colour);
+    }
+  }
+}
