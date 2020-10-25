@@ -6,17 +6,17 @@ import FooterLink from "./footer-link"
 const footerLinks = [
   {
     title: "Twitter",
-    to: "https://www.twitter.com/jayceehex",
+    href: "https://www.twitter.com/jayceehex",
     icon: <FaTwitter />,
   },
   {
     title: "Github",
-    to: "https://www.github.com/jayceehex",
+    href: "https://www.github.com/jayceehex",
     icon: <FaGithub />,
   },
   {
     title: "ItchIo",
-    to: "https://jayceeha.itch.io",
+    href: "https://jayceeha.itch.io",
     icon: <FaItchIo />,
   },
 ]
@@ -27,7 +27,7 @@ const Footer = () => (
       {footerLinks.map((link, key) => (
         <FooterLink
           title={link.title}
-          to={link.to}
+          href={link.href}
           icon={link.icon}
           key={key}
         />
