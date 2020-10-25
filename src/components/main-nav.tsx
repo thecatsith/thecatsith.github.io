@@ -10,8 +10,8 @@ const MainNav = ({ lightMode, toggleLightMode, navLinks }) => {
   return (
     <nav className="main-nav">
       <ul className="main-nav--items">
-        {navLinks.map(link => (
-          <li>
+        {navLinks.map((link: any, key: string) => (
+          <li key={key}>
             <Link
               to={link.link}
               title={link.name}
