@@ -2,13 +2,15 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import "../styles/styles.css"
 import Layout from "../components/layout"
+import { toggleLightMode } from "../state/app"
+import { connect } from 'react-redux'
 
-const AboutSitePage = () => (
+const AboutSitePage = ({ dispatch, isLightMode }) => (
   <>
     <Helmet>
       <title>About this site | jayceehex.github.io</title>
     </Helmet>
-    <Layout>
+    <Layout lightMode={isLightMode} toggleLightMode={() => dispatch(toggleLightMode(!isLightMode))}>
       <p>
         This site is built using{" "}
         <a
@@ -34,4 +36,6 @@ const AboutSitePage = () => (
   </>
 )
 
-export default AboutSitePage
+export default connect(state => ({
+  isLightMode: state.app.isLightMode
+}), null)(AboutSitePage)
