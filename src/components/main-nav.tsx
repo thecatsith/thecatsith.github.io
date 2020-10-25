@@ -10,9 +10,16 @@ const MainNav = ({ lightMode, toggleLightMode, navLinks }) => {
   return (
     <nav className="main-nav">
       <ul className="main-nav--items">
-        {navLinks.map((link) => (
+        {navLinks.map(link => (
           <li>
-            <Link to={link.link} title={link.name} className="main-nav--item" activeClassName="main-nav--item__active">{link.name}</Link>
+            <Link
+              to={link.link}
+              title={link.name}
+              className="main-nav--item"
+              activeClassName="main-nav--item__active"
+            >
+              {link.name}
+            </Link>
           </li>
         ))}
         <li>

@@ -5,18 +5,18 @@ module.exports = {
     author: `Jen Hoskins`,
     navLinks: [
       {
-        name: 'Home',
-        link: '/',
+        name: "Home",
+        link: "/",
       },
       {
-        name: 'About me',
-        link: '/about-me',
+        name: "About me",
+        link: "/about-me",
       },
       {
-        name: 'About this site',
-        link: '/about-site',
+        name: "About this site",
+        link: "/about-site",
       },
-    ]
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
