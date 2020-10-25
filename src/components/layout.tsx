@@ -21,6 +21,10 @@ const Layout = ({ children, lightMode, toggleLightMode }) => {
       site {
         siteMetadata {
           title
+          navLinks {
+            name
+            link
+          }
         }
       }
     }
@@ -29,7 +33,7 @@ const Layout = ({ children, lightMode, toggleLightMode }) => {
   return (
     <div className={`container${lightMode ? " light-theme" : ""}`}>
       <div className="content-box">
-        <MainNav toggleLightMode={toggleLightMode} lightMode={lightMode} />
+        <MainNav navLinks={data.site.siteMetadata?.navLinks || []} toggleLightMode={toggleLightMode} lightMode={lightMode} />
         <Header siteTitle={data.site.siteMetadata?.title || ``} />
         <main id="main">{children}</main>
       </div>

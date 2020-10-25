@@ -3,6 +3,20 @@ module.exports = {
     title: `jayceehex.github.io`,
     description: `Another portfolio site, made with Gatsby.`,
     author: `Jen Hoskins`,
+    navLinks: [
+      {
+        name: 'Home',
+        link: '/',
+      },
+      {
+        name: 'About me',
+        link: '/about-me',
+      },
+      {
+        name: 'About this site',
+        link: '/about-site',
+      },
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
