@@ -1,0 +1,19 @@
+.front-page-header {
+  min-height: 40vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: center / cover url('../images/blurred-portrait.jpeg');
+}
+
+.header__text {
+  color: var(--dark-mode-primary-accent-colour);
+}
+
+.light-theme {
+  .front-page-header {
+    .header__text {
+      color: var(--light-mode-primary-accent-colour);
+    }
+  }
+}
