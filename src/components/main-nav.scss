@@ -1,5 +1,7 @@
 .main-nav {
   position: sticky;
+  background-color: var(--dark-mode-secondary-accent-colour);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   &--items {
     display: flex;
     justify-content: space-between;
@@ -22,11 +24,14 @@
 }
 
 .light-theme {
-  .main-nav--item {
-    color: var(--light-mode-text-colour);
-    &:hover, &:focus, &__active {
-      background-color: transparent;
-      color: var(--light-mode-primary-accent-colour);
+  .main-nav {
+    background-color: var(--light-mode-text-colour);
+    &--item {
+      color: var(--dark-mode-text-colour);
+      &:hover, &:focus, &__active {
+        background-color: transparent;
+        color: var(--light-mode-primary-accent-colour);
+      }
     }
   }
 }
