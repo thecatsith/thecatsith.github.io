@@ -30,12 +30,12 @@ const FrontPageLayout = ({ lightMode, toggleLightMode, children }) => {
 
   return (
     <div className={`container${lightMode ? " light-theme" : ""}`}>
+      <MainNav
+        navLinks={data.site.siteMetadata?.navLinks || []}
+        toggleLightMode={toggleLightMode}
+        lightMode={lightMode}
+      />
       <div className="content-box">
-        <MainNav
-          navLinks={data.site.siteMetadata?.navLinks || []}
-          toggleLightMode={toggleLightMode}
-          lightMode={lightMode}
-        />
         <main id="main">{children}</main>
       </div>
       <Footer />
