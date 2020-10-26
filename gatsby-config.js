@@ -5,12 +5,8 @@ module.exports = {
     author: `Jen Hoskins`,
     navLinks: [
       {
-        name: "Home",
-        link: "/",
-      },
-      {
         name: "About me",
-        link: "/about-me",
+        link: "/",
       },
       {
         name: "About this site",
