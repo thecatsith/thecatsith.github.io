@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import "./header.scss"
@@ -6,7 +5,7 @@ import "./header.scss"
 const Header = ({ siteTitle }) => (
   <header className="header">
     <h1 className="header__text">
-      <Link to="/">{siteTitle}</Link>
+      {siteTitle}
     </h1>
   </header>
 )
