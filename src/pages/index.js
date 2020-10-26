@@ -1,17 +1,16 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import "../styles/styles.css"
-import Layout from "../components/layout"
+import FrontPageLayout from "../components/front-page-layout"
 import { toggleLightMode } from "../state/app"
 import { connect } from "react-redux"
 
-const IndexPage = ({ location, isLightMode, dispatch }) => (
+const IndexPage = ({ isLightMode, dispatch }) => (
   <>
     <Helmet>
       <title>jayceehex.github.io</title>
     </Helmet>
-    <Layout
-      location={location}
+    <FrontPageLayout
       lightMode={isLightMode}
       toggleLightMode={() => dispatch(toggleLightMode(!isLightMode))}
     >
@@ -23,7 +22,7 @@ const IndexPage = ({ location, isLightMode, dispatch }) => (
         accessibility. Outside of code, I read too many books and don't get
         enough vitamin D.
       </p>
-    </Layout>
+    </FrontPageLayout>
   </>
 )
 

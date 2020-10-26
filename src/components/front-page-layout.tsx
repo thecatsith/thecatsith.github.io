@@ -13,12 +13,11 @@ import Header from "./header"
 import Footer from "./footer"
 import MainNav from "./main-nav"
 
-const Layout = ({ location, lightMode, toggleLightMode, children }) => {
+const FrontPageLayout = ({ lightMode, toggleLightMode, children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query AuthorNavLinksQuery {
       site {
         siteMetadata {
-          title
           author
           navLinks {
             name
@@ -29,30 +28,14 @@ const Layout = ({ location, lightMode, toggleLightMode, children }) => {
     }
   `)
 
-  const siteTitle = (
-    path: string,
-    author: string,
-    navLinks: Array<any>
-  ): string =>
-    path === "/"
-      ? author
-      : navLinks.find(navLink => navLink.link == path)?.name || ``
-
   return (
     <div className={`container${lightMode ? " light-theme" : ""}`}>
-      <MainNav
-        navLinks={data.site.siteMetadata?.navLinks || []}
-        toggleLightMode={toggleLightMode}
-        lightMode={lightMode}
-      />
-      <Header
-        siteTitle={siteTitle(
-          location.pathname,
-          data.site.siteMetadata?.author || ``,
-          data.site.siteMetadata?.navLinks || []
-        )}
-      />
       <div className="content-box">
+        <MainNav
+          navLinks={data.site.siteMetadata?.navLinks || []}
+          toggleLightMode={toggleLightMode}
+          lightMode={lightMode}
+        />
         <main id="main">{children}</main>
       </div>
       <Footer />
@@ -60,8 +43,8 @@ const Layout = ({ location, lightMode, toggleLightMode, children }) => {
   )
 }
 
-Layout.propTypes = {
+FrontPageLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default FrontPageLayout

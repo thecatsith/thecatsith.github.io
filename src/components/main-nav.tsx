@@ -9,29 +9,31 @@ const MainNav = ({ lightMode, toggleLightMode, navLinks }) => {
 
   return (
     <nav className="main-nav">
-      <ul className="main-nav--items">
-        {navLinks.map((link: any, key: string) => (
-          <li key={key}>
-            <Link
-              to={link.link}
-              title={link.name}
-              className="main-nav--item"
-              activeClassName="main-nav--item__active"
+      <div className="content-box">
+        <ul className="main-nav--items">
+          {navLinks.map((link: any, key: string) => (
+            <li key={key}>
+              <Link
+                to={link.link}
+                title={link.name}
+                className="main-nav--item"
+                activeClassName="main-nav--item__active"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <button
+              className="main-nav--item icon-button"
+              onClick={toggleLightMode}
+              aria-label="Toggle light mode"
             >
-              {link.name}
-            </Link>
+              {lightModeToggleIcon()}
+            </button>
           </li>
-        ))}
-        <li>
-          <button
-            className="main-nav--item icon-button"
-            onClick={toggleLightMode}
-            aria-label="Toggle light mode"
-          >
-            {lightModeToggleIcon()}
-          </button>
-        </li>
-      </ul>
+        </ul>
+      </div>
     </nav>
   )
 }
